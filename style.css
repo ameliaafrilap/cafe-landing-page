@@ -40,7 +40,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 28px 8%;
+  padding: 16px 8%;
 }
 nav a {
   text-decoration: none;
@@ -53,6 +53,7 @@ nav a:hover {
 
 nav h2 {
   color: #5c3317;
+  font-size: 24px;
 }
 
 nav ul {
@@ -62,7 +63,7 @@ nav ul {
 }
 
 nav li {
-  font-size: 18px;
+  font-size: 16px;
   cursor: pointer;
 }
 
