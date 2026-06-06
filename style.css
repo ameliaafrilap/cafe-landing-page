@@ -26,6 +26,16 @@ body {
    NAVBAR
 ====================== */
 
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+
+  background: rgba(247, 239, 229, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
 nav {
   display: flex;
   justify-content: space-between;
@@ -77,6 +87,10 @@ nav li:hover {
   margin-top: -40px;
 }
 
+.hero-title {
+  animation: fadeIn 1.5s ease;
+}
+
 .hero-text h1 {
   font-size: 56px;
   line-height: 1.1;
@@ -84,6 +98,23 @@ nav li:hover {
 
 .hero-text p {
   margin-top: 12px;
+  animation: fadeIn 2s ease;
+}
+
+.hero-text button {
+  animation: fadeIn 2.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ======================
@@ -142,10 +173,15 @@ button:hover {
   border-radius: 24px;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
   transition: 0.3s;
+  overflow: hidden;
 }
 
 .menu-card:hover {
   transform: translateY(-10px);
+}
+
+.menu-card:hover img {
+  transform: scale(1.08);
 }
 
 .menu-card img {
@@ -153,6 +189,7 @@ button:hover {
   height: 220px;
   object-fit: cover;
   border-radius: 18px;
+  transition: 0.4s;
 }
 
 .menu-card h3 {
@@ -254,4 +291,17 @@ footer {
     justify-content: center;
     flex-wrap: wrap;
   }
+}
+.btn-wa {
+  display: inline-block;
+  padding: 12px 20px;
+  background: #25d366;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.btn-wa:hover {
+  transform: translateY(-3px);
 }
